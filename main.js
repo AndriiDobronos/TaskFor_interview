@@ -63,10 +63,20 @@ for (let letter of eArr) {
 const arrM = ['a', 'b','c'];
 const mArr = arrM.entries();
 console.log(mArr.next().value); // [0, 'a']
+
 let n = 0
 let x = 0
 while(n < 3) {
     n++
     x = x + n //x += n
 }
-alert(x)
+//alert(x)  // 6
+
+let request = ''
+let regexp = ''
+do {
+    request = prompt('What is your name ?')?.trim()
+    regexp = request?.match(/\D+/ig)?.join('')
+        console.log(regexp)
+} while (request !== regexp)
+alert(`${request}  :  ${regexp}`)
